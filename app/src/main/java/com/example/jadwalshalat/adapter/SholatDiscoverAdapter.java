@@ -41,8 +41,8 @@ public class SholatDiscoverAdapter extends RecyclerView.Adapter<SholatDiscoverAd
     @Override
     public void onBindViewHolder(@NonNull SholatDiscoverAdapter.ViewHolder holder, int position) {
         //Glide.with(context).load()
-        holder.subuh.setText(timingsItems.get(position).getImsak()+"");
-       // Log.d("myTag", timingsItems.get(position).getImsak()+"");
+        holder.subuh.setText(timingsItems.get(position).getFajr()+"");
+
     }
 
     @Override
@@ -51,13 +51,17 @@ public class SholatDiscoverAdapter extends RecyclerView.Adapter<SholatDiscoverAd
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        TextView subuh;
+        TextView subuh, dzuhur, ashar, maghrib,isya;
         CardView cvItem;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             cvItem = itemView.findViewById(R.id.itemlist_cv);
             subuh = itemView.findViewById(R.id.itemlist_subuh);
+            dzuhur = itemView.findViewById(R.id.itemlist_dzuhur);
+            ashar=itemView.findViewById(R.id.itemlist_ashar);
+            maghrib=itemView.findViewById(R.id.itemlist_maghrib);
+            isya=itemView.findViewById(R.id.itemlist_isya);
         }
     }
 }
