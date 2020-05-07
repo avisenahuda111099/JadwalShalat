@@ -42,6 +42,10 @@ public class SholatDiscoverAdapter extends RecyclerView.Adapter<SholatDiscoverAd
     public void onBindViewHolder(@NonNull SholatDiscoverAdapter.ViewHolder holder, int position) {
         //Glide.with(context).load()
         holder.subuh.setText(timingsItems.get(position).getFajr()+"");
+        holder.dzuhur.setText(timingsItems.get(position).getDhuhr()+"");
+        holder.ashar.setText(timingsItems.get(position).getAsr()+"");
+        holder.maghrib.setText(timingsItems.get(position).getMaghrib()+"");
+        holder.isya.setText(timingsItems.get(position).getIsha()+"");
 
     }
 
