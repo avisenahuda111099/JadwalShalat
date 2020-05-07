@@ -26,7 +26,7 @@ public class SholatDiscoverAdapter extends RecyclerView.Adapter<SholatDiscoverAd
     }
 
     public void setData(ArrayList<Timings> items) {
-        timingsItems    .clear();
+        timingsItems.clear();
         timingsItems.addAll(items);
         notifyDataSetChanged();
     }
@@ -40,13 +40,13 @@ public class SholatDiscoverAdapter extends RecyclerView.Adapter<SholatDiscoverAd
 
     @Override
     public void onBindViewHolder(@NonNull SholatDiscoverAdapter.ViewHolder holder, int position) {
-        //Glide.with(context).load()
-        holder.subuh.setText(timingsItems.get(position).getFajr()+"");
-        holder.dzuhur.setText(timingsItems.get(position).getDhuhr()+"");
-        holder.ashar.setText(timingsItems.get(position).getAsr()+"");
-        holder.maghrib.setText(timingsItems.get(position).getMaghrib()+"");
-        holder.isya.setText(timingsItems.get(position).getIsha()+"");
 
+        holder.subuh.setText(timingsItems.get(position).getFajr());
+        holder.dzuhur.setText(timingsItems.get(position).getDhuhr());
+        holder.ashar.setText(timingsItems.get(position).getAsr());
+        holder.maghrib.setText(timingsItems.get(position).getMaghrib());
+        holder.isya.setText(timingsItems.get(position).getIsha());
+        Log.d("myTag", "TES"+timingsItems.get(position).getIsha());
     }
 
     @Override
@@ -55,7 +55,7 @@ public class SholatDiscoverAdapter extends RecyclerView.Adapter<SholatDiscoverAd
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        TextView subuh, dzuhur, ashar, maghrib,isya;
+        TextView subuh, dzuhur, ashar, maghrib, isya;
         CardView cvItem;
 
         public ViewHolder(@NonNull View itemView) {
@@ -63,9 +63,9 @@ public class SholatDiscoverAdapter extends RecyclerView.Adapter<SholatDiscoverAd
             cvItem = itemView.findViewById(R.id.itemlist_cv);
             subuh = itemView.findViewById(R.id.itemlist_subuh);
             dzuhur = itemView.findViewById(R.id.itemlist_dzuhur);
-            ashar=itemView.findViewById(R.id.itemlist_ashar);
-            maghrib=itemView.findViewById(R.id.itemlist_maghrib);
-            isya=itemView.findViewById(R.id.itemlist_isya);
+            ashar = itemView.findViewById(R.id.itemlist_ashar);
+            maghrib = itemView.findViewById(R.id.itemlist_maghrib);
+            isya = itemView.findViewById(R.id.itemlist_isya);
         }
     }
 }

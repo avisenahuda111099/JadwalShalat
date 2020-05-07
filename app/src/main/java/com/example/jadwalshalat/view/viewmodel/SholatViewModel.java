@@ -27,7 +27,7 @@ public class SholatViewModel extends ViewModel {
         apiMain.getApiSholat().getSholatDiscover().enqueue(new Callback<SholatDiscoverResponse>() {
             @Override
             public void onResponse(Call<SholatDiscoverResponse> call, Response<SholatDiscoverResponse> response) {
-
+                Log.d("Resp", "RESPONSE");
                 SholatDiscoverResponse responseDiscover = response.body();
                 if (responseDiscover != null && responseDiscover.getData() != null) {
                     ArrayList<Timings> timingsItems = responseDiscover.getData();
