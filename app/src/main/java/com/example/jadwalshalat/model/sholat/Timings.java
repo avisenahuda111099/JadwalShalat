@@ -2,7 +2,7 @@ package com.example.jadwalshalat.model.sholat;
 
 import com.google.gson.annotations.SerializedName;
 
-public class Timings  {
+public class Timings {
 
 	@SerializedName("Sunset")
 	private String sunset;
@@ -118,6 +118,4 @@ public class Timings  {
 			",imsak = '" + imsak + '\'' + 
 			"}";
 		}
-
-
 }

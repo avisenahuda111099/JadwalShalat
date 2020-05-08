@@ -3,18 +3,31 @@ package com.example.jadwalshalat.view.activity;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import retrofit2.Call;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 
+import com.example.jadwalshalat.database.AppDatabase;
+import com.example.jadwalshalat.model.sholat.SholatDiscoverResponse;
+import com.example.jadwalshalat.service.SholatRepository;
 import com.example.jadwalshalat.view.fragment.DBSholatFragment;
 import com.example.jadwalshalat.R;
+import com.example.jadwalshalat.view.fragment.FormFragment;
 import com.example.jadwalshalat.view.fragment.SholatFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+
+
 
 public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
 private BottomNavigationView bottomNavigationView;
 private Fragment selectedFragment=new SholatFragment();
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +49,10 @@ private Fragment selectedFragment=new SholatFragment();
                 break;
             case R.id.menu_bottomnav_dbSholat:
                 selectedFragment=new DBSholatFragment();
+                loadFragment(selectedFragment);
+                break;
+            case R.id.menu_bottomnav_form:
+                selectedFragment=new FormFragment();
                 loadFragment(selectedFragment);
                 break;
         }

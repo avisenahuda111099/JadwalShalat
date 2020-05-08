@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.example.jadwalshalat.R;
+import com.example.jadwalshalat.model.sholat.DataItem;
 import com.example.jadwalshalat.model.sholat.Timings;
 
 import java.util.ArrayList;
@@ -18,14 +19,14 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class SholatDiscoverAdapter extends RecyclerView.Adapter<SholatDiscoverAdapter.ViewHolder> {
-    private ArrayList<Timings> timingsItems = new ArrayList<>();
+    private ArrayList<DataItem> timingsItems = new ArrayList<>();
     private Context context;
 
     public SholatDiscoverAdapter(Context context) {
         this.context = context;
     }
 
-    public void setData(ArrayList<Timings> items) {
+    public void setData(ArrayList<DataItem> items) {
         timingsItems.clear();
         timingsItems.addAll(items);
         notifyDataSetChanged();
@@ -41,12 +42,13 @@ public class SholatDiscoverAdapter extends RecyclerView.Adapter<SholatDiscoverAd
     @Override
     public void onBindViewHolder(@NonNull SholatDiscoverAdapter.ViewHolder holder, int position) {
 
-        holder.subuh.setText(timingsItems.get(position).getFajr());
-        holder.dzuhur.setText(timingsItems.get(position).getDhuhr());
-        holder.ashar.setText(timingsItems.get(position).getAsr());
-        holder.maghrib.setText(timingsItems.get(position).getMaghrib());
-        holder.isya.setText(timingsItems.get(position).getIsha());
-        Log.d("myTag", "TES"+timingsItems.get(position).getIsha());
+        holder.subuh.setText("Subuh: "+timingsItems.get(position).getTimings().getFajr()+"");
+        holder.dzuhur.setText("Dzuhur: "+timingsItems.get(position).getTimings().getDhuhr()+"");
+        holder.ashar.setText("Ashar: "+timingsItems.get(position).getTimings().getAsr()+"");
+        holder.maghrib.setText("Maghrib: "+timingsItems.get(position).getTimings().getMaghrib()+"");
+        holder.isya.setText("Isya: "+timingsItems.get(position).getTimings().getIsha()+"");
+        holder.tanggal.setText("Tanggal: "+timingsItems.get(position).getDate().getReadable()+"");
+
     }
 
     @Override
@@ -55,7 +57,7 @@ public class SholatDiscoverAdapter extends RecyclerView.Adapter<SholatDiscoverAd
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        TextView subuh, dzuhur, ashar, maghrib, isya;
+        TextView subuh, dzuhur, ashar, maghrib, isya, tanggal;
         CardView cvItem;
 
         public ViewHolder(@NonNull View itemView) {
@@ -66,6 +68,7 @@ public class SholatDiscoverAdapter extends RecyclerView.Adapter<SholatDiscoverAd
             ashar = itemView.findViewById(R.id.itemlist_ashar);
             maghrib = itemView.findViewById(R.id.itemlist_maghrib);
             isya = itemView.findViewById(R.id.itemlist_isya);
+            tanggal = itemView.findViewById(R.id.itemlist_tanggal);
         }
     }
 }

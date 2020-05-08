@@ -16,6 +16,7 @@ import android.view.ViewGroup;
 
 import com.example.jadwalshalat.R;
 import com.example.jadwalshalat.adapter.SholatDiscoverAdapter;
+import com.example.jadwalshalat.model.sholat.DataItem;
 import com.example.jadwalshalat.model.sholat.SholatDiscoverResponse;
 import com.example.jadwalshalat.model.sholat.Timings;
 import com.example.jadwalshalat.view.viewmodel.SholatViewModel;
@@ -57,9 +58,9 @@ public class SholatFragment extends Fragment {
         rvSholatDiscover.setAdapter(sholatDiscoverAdapter);
     }
 
-   private Observer<ArrayList<Timings>> getSholatDiscover=new Observer<ArrayList<Timings>>() {
+   private Observer<ArrayList<DataItem>> getSholatDiscover=new Observer<ArrayList<DataItem>>() {
        @Override
-       public void onChanged(ArrayList<Timings> timings) {
+       public void onChanged(ArrayList<DataItem> timings) {
            if(timings != null){
                sholatDiscoverAdapter.setData(timings);
            }

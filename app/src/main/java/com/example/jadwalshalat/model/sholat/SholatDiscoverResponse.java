@@ -10,7 +10,7 @@ public class SholatDiscoverResponse{
 	private int code;
 
 	@SerializedName("data")
-	private ArrayList<Timings> data;
+	private ArrayList<DataItem> data;
 
 	@SerializedName("status")
 	private String status;
@@ -23,11 +23,11 @@ public class SholatDiscoverResponse{
 		return code;
 	}
 
-	public void setData(ArrayList<Timings> data){
+	public void setData(ArrayList<DataItem> data){
 		this.data = data;
 	}
 
-	public ArrayList<Timings> getData(){
+	public ArrayList<DataItem> getData(){
 		return data;
 	}
 

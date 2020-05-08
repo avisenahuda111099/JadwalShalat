@@ -8,6 +8,12 @@
         android:icon="@drawable/ic_brightness_4_black_24dp"
         app:showAsAction="ifRoom"
         />
+    <item
+        android:id="@+id/menu_bottomnav_form"
+        android:title="Form"
+        android:icon="@drawable/menu"
+        app:showAsAction="ifRoom"
+        />
 
     <item
         android:id="@+id/menu_bottomnav_dbSholat"
@@ -15,4 +21,6 @@
         android:icon="@drawable/ic_folder_open_black_24dp"
         app:showAsAction="ifRoom"
         />
+
+
 </menu>
