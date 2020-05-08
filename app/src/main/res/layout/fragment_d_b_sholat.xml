@@ -4,12 +4,51 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".view.fragment.DBSholatFragment">
+        <!-- TODO: Update blank fragment layout -->
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Fragment DB Sholat"
-        android:textSize="24sp"/> />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
 
-</FrameLayout>
+            >
+            <ImageView
+                android:src="@drawable/mosque_icon"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"/>
+            <TextView
+                android:paddingTop="40dp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="About"
+                android:textSize="36dp"
+                />
+
+            <TextView
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="20dp"
+                android:textSize="24dp"
+                android:text="Aplikasi ini merupakan aplikasi yang dapat menampilkan jadwal sholat dari seluruh dunia. Dapat menampilkan informasi jadwal sholat berdasarkan kota, negara, bulan, dan tahun dalam periode waktu satu bulan."/>
+
+
+            <Button
+                android:layout_marginTop="4dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:id="@+id/btn_prof"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#03C03C"
+                android:textColor="#FDFDFD"
+                android:text="Profile Devs"
+                >
+
+            </Button>
+        </LinearLayout>
+
+    </FrameLayout>
+

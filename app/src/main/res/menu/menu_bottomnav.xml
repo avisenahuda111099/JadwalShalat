@@ -17,7 +17,7 @@
 
     <item
         android:id="@+id/menu_bottomnav_dbSholat"
-        android:title="DB Sholat"
+        android:title="About"
         android:icon="@drawable/ic_folder_open_black_24dp"
         app:showAsAction="ifRoom"
         />

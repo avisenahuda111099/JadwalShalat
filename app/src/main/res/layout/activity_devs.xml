@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#03C03C"
+    tools:context=".view.activity.DevsActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/civ_me"
+                android:src="@drawable/foto_profil"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                />
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/civ_fiki"
+                android:src="@drawable/mosque_icon"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                />
+
+        </LinearLayout>
+        <TextView
+            android:paddingTop="10dp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Profile"
+            android:textSize="36dp"
+            />
+
+        <TextView
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="20dp"
+            android:textSize="30dp"
+            android:text="Developers"/>
+
+
+
+        <TextView
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="4dp"
+            android:textSize="16dp"
+            android:text="Perkenalkan, nama kami adalah Avisena Rahman Istakahuda dan Habib Muhammad Thariq. Kami mahasiswa Universitas Pembangunan Nasional Yogyakarta tahun angkatan 2017. NIM kami adalah 123170063 dan 123170004. Aplikasi ini dibuat atas dasar memenuhi tugas akhir praktikum teknologi mobile."/>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
