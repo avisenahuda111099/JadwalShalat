@@ -26,7 +26,7 @@
                 />
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/civ_fiki"
-                android:src="@drawable/mosque_icon"
+                android:src="@drawable/habib"
                 android:layout_width="180dp"
                 android:layout_height="180dp"
                 />
